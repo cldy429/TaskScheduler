@@ -1,0 +1,265 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FFF8F9">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ===== HEADER ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:paddingTop="48dp"
+            android:paddingBottom="16dp"
+            android:gravity="center_vertical">
+
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@android:drawable/ic_menu_revert"
+                android:background="?attr/selectableItemBackgroundBorderless"
+                android:tint="@color/text_dark"/>
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="CREATE NEW TASK"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/text_dark"
+                android:gravity="center"/>
+
+            <View
+                android:layout_width="40dp"
+                android:layout_height="40dp"/>
+
+        </LinearLayout>
+
+        <!-- ===== FORM ===== -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingStart="20dp"
+            android:paddingEnd="20dp"
+            android:paddingTop="24dp">
+
+            <!-- Нэр -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Name"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+
+            <EditText
+                android:id="@+id/etTaskName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Task Name"
+                android:textSize="15sp"
+                android:textColor="@color/text_dark"
+                android:background="@android:color/transparent"
+                android:paddingTop="8dp"
+                android:paddingBottom="12dp"
+                android:layout_marginBottom="16dp"/>
+
+            <!-- Огноо -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Date"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Monday 10, November"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_dark"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="12dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnSelectDate"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_my_calendar"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/primary"/>
+
+            </LinearLayout>
+
+            <!-- Эхлэх цаг -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Starting Time"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginBottom="16dp">
+
+                <TextView
+                    android:id="@+id/tvTime"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="09:00 - 11:00"
+                    android:textSize="15sp"
+                    android:textColor="@color/text_dark"
+                    android:paddingTop="8dp"
+                    android:paddingBottom="12dp"/>
+
+                <ImageButton
+                    android:id="@+id/btnSelectTime"
+                    android:layout_width="36dp"
+                    android:layout_height="36dp"
+                    android:src="@android:drawable/ic_menu_recent_history"
+                    android:background="?attr/selectableItemBackgroundBorderless"
+                    android:tint="@color/primary"/>
+
+            </LinearLayout>
+
+            <!-- Remind Me -->
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp"
+                app:cardCornerRadius="14dp"
+                app:cardElevation="1dp"
+                app:cardBackgroundColor="#FFFFFF">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="16dp"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="Remind Me"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_dark"/>
+
+                    <androidx.appcompat.widget.SwitchCompat
+                        android:id="@+id/switchReminder"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:thumbTint="@color/primary"
+                        app:trackTint="@color/text_dark_gray"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!-- Category -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="12dp">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Category"
+                    android:textSize="15sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/text_dark"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="See more"
+                    android:textSize="13sp"
+                    android:textColor="@color/primary"/>
+            </LinearLayout>
+
+            <!-- Category товчнууд -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginBottom="32dp">
+
+                <Button
+                    android:id="@+id/btnCategoryLife"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Life"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_dark"
+                    android:backgroundTint="#F0F0F0"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnCategoryWork"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Work"
+                    android:textSize="13sp"
+                    android:textColor="@color/text_dark"
+                    android:backgroundTint="#F0F0F0"
+                    android:layout_marginEnd="8dp"/>
+
+                <Button
+                    android:id="@+id/btnCategoryStudy"
+                    android:layout_width="wrap_content"
+                    android:layout_height="36dp"
+                    android:text="Study"
+                    android:textSize="13sp"
+                    android:textColor="@color/white"
+                    android:backgroundTint="@color/primary"/>
+
+            </LinearLayout>
+
+            <!-- CREATE TASK товч -->
+            <Button
+                android:id="@+id/btnCreateTask"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:text="CREATE TASK"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:backgroundTint="@color/primary"
+                android:layout_marginBottom="32dp"/>
+
+        </LinearLayout>
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>
