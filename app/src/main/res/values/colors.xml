@@ -13,7 +13,7 @@
 
     <!-- Текстийн өнгө -->
     <color name="text_dark">#1A1A2E</color>
-    <color name="text_dark_gray">#474747</color>
+    <color name="text_dark_gray">#595959</color>
 
     <!-- Ангиллын өнгө -->
     <color name="category_work">#fecfe0</color>
