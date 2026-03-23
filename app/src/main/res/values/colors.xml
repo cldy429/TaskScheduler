@@ -3,20 +3,20 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <!-- Үндсэн өнгө - ягаан -->
-    <color name="primary">#E8547A</color>
+    <color name="primary">#dd5f71</color>
 
     <!-- Шар өнгө -->
-    <color name="accent">#F9C94E</color>
+    <color name="accent">#fbc756</color>
 
     <!-- Цайвар дэвсгэр -->
-    <color name="background">#FFF1DD</color>
+    <color name="background">#fef4e8</color>
 
     <!-- Текстийн өнгө -->
     <color name="text_dark">#1A1A2E</color>
     <color name="text_dark_gray">#474747</color>
 
     <!-- Ангиллын өнгө -->
-    <color name="category_work">#FFEEF2</color>
-    <color name="category_life">#E8F5E9</color>
-    <color name="category_study">#FFF8E1</color>
+    <color name="category_work">#fecfe0</color>
+    <color name="category_life">#fbe5ee</color>
+    <color name="category_study">#fcbd98</color>
 </resources>

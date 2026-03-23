@@ -1,18 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <vector xmlns:android="http://schemas.android.com/apk/res/android"
-    android:width="400dp"
-    android:height="260dp"
-    android:viewportWidth="400"
-    android:viewportHeight="260">
+    android:width="360dp"
+    android:height="220dp"
+    android:viewportWidth="360"
+    android:viewportHeight="220">
 
+    <!-- Арын шар давалгаа -->
     <path
-        android:pathData="M0,0 L400,0 L400,200 Q300,280 200,220 Q100,160 0,240 Z"
-        android:fillColor="#E8547A"
-        android:fillAlpha="0.7"/>
+        android:fillColor="#F7C244"
+        android:pathData="M0,0 L360,0 L360,160 Q300,220 200,170 Q100,120 0,180 Z"/>
 
+    <!-- Урдах ягаан давалгаа -->
     <path
-        android:pathData="M0,0 L400,0 L400,180 Q300,260 200,200 Q100,140 0,220 Z"
-        android:fillColor="#FFDF3F"
-        android:fillAlpha="0.7"/>
+        android:fillColor="#E8556D"
+        android:pathData="M0,0 L360,0 L360,130 Q280,190 180,145 Q80,100 0,150 Z"/>
+
+    <!-- Цайвар ягаан давааалгаа -->
+    <path
+        android:fillColor="#EF7F8A"
+        android:pathData="M0,0 L360,0 L360,100 Q270,155 170,115 Q70,75 0,120 Z"
+        android:fillAlpha="0.6"/>
 
 </vector>

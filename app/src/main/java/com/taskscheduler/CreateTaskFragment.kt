@@ -108,11 +108,22 @@ class CreateTaskFragment : Fragment() {
 
     // Сонгосон ангилалын товчийг тодруулах
     private fun highlightCategory(active: Button, vararg others: Button) {
-        active.backgroundTintList = requireContext().getColorStateList(R.color.primary)
+        // Сонгосон товч → үндсэн өнгө, цагаан текст
+        active.backgroundTintList = android.content.res.ColorStateList.valueOf(
+            requireContext().getColor(R.color.primary)
+        )
         active.setTextColor(requireContext().getColor(android.R.color.white))
-        others.forEach {
-            it.setBackgroundColor(android.graphics.Color.parseColor("#F0F0F0"))
-            it.setTextColor(android.graphics.Color.parseColor("#2D2D2D"))
+
+        // Бусад товчнууд → өөрсдийн өнгөдөө буцна
+        others.forEach { btn ->
+            val color = when (btn.id) {
+                R.id.btnCategoryLife  -> requireContext().getColor(R.color.category_life)
+                R.id.btnCategoryWork  -> requireContext().getColor(R.color.category_work)
+                R.id.btnCategoryStudy -> requireContext().getColor(R.color.category_study)
+                else -> android.graphics.Color.parseColor("#F0F0F0")
+            }
+            btn.backgroundTintList = android.content.res.ColorStateList.valueOf(color)
+            btn.setTextColor(requireContext().getColor(R.color.text_dark))
         }
     }
 }

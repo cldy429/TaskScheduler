@@ -29,6 +29,16 @@ class TaskAdapter(private val tasks: MutableList<Task>) :
         holder.tvDate.text     = task.date
         holder.tvTime.text     = "${task.startTime} - ${task.endTime}"
         holder.tvCategory.text = task.category
+
+        // Ангиллын дагуу өнгө өөрчлөх
+        val context = holder.itemView.context
+        val (bgColor, textColor) = when (task.category) {
+            "Work"  -> Pair(R.color.category_work,  R.color.primary)
+            "Study" -> Pair(R.color.category_study, R.color.text_dark)
+            else    -> Pair(R.color.category_life,  R.color.primary)  // Life
+        }
+        holder.tvCategory.setBackgroundColor(context.getColor(bgColor))
+        holder.tvCategory.setTextColor(context.getColor(textColor))
     }
 
     override fun getItemCount() = tasks.size
